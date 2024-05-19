@@ -1,0 +1,59 @@
+[versions]
+agp = "8.3.2"
+hiltPlugin = "2.45"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.6.1"
+material = "1.11.0"
+activity = "1.8.0"
+constraintlayout = "2.1.4"
+room = "2.6.1"
+rxjava = "2.1.1"
+hilt = "2.45"
+hiltCompiler = "1.2.0"
+retrofit = "2.9.0"
+viewModel = "2.6.1"
+lifecycle_version = "1.1.1"
+okhttp_version = "4.12.0"
+mockito_version="3.11.2"
+coretest_version="1.1.1"
+
+[libraries]
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+roomRxjava = { group = "androidx.room", name = "room-rxjava2", version.ref = "room" }
+roomMain = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+roomTest = { group = "androidx.room", name = "room-testing", version.ref = "room" }
+roomProcesor = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+rxandroid = { group = "io.reactivex.rxjava2", name = "rxandroid", version.ref = "rxjava" }
+rxjavaMain = { group = "io.reactivex.rxjava2", name = "rxjava", version.ref = "rxjava" }
+
+
+hiltmain = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hiltdaggerProcessor = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+hiltNav = { group = "androidx.hilt", name = "hilt-navigation-fragment", version.ref = "hiltCompiler" }
+hiltProcessor = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltCompiler" }
+
+
+retrofitMain = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofitGson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+retrofitRxjava = { group = "com.squareup.retrofit2", name = "adapter-rxjava2", version.ref = "retrofit" }
+okhttp = { group = "com.squareup.okhttp3", name="logging-interceptor", version.ref="okhttp_version"}
+
+viewModelMain = { group = "androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "viewModel" }
+viewModelLiveData = { group = "androidx.lifecycle", name = "lifecycle-livedata", version.ref = "viewModel" }
+lifeCycle = { group = "android.arch.lifecycle", name = "extensions", version.ref = "lifecycle_version" }
+
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+mockito ={group = "org.mockito", name="mockito-core", version.ref="mockito_version"}
+core-testing ={ group="android.arch.core", name="core-testing", version.ref="coretest_version"}
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+daggerPlugin = { id = "com.google.dagger.hilt.android", version.ref = "hiltPlugin" }
+

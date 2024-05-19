@@ -1,0 +1,70 @@
+plugins {
+    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.daggerPlugin)
+}
+
+android {
+    namespace 'com.mexicandeveloper.iplocation'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.mexicandeveloper.iplocation"
+        minSdk 28
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+
+    implementation libs.hiltmain
+    annotationProcessor libs.hiltdaggerProcessor
+    implementation libs.hiltNav
+    annotationProcessor libs.hiltProcessor
+
+    implementation libs.rxjavaMain
+    implementation libs.rxandroid
+    implementation libs.retrofitMain
+    implementation libs.retrofitGson
+    implementation libs.retrofitRxjava
+
+    implementation libs.okhttp
+    implementation libs.viewModelMain
+    implementation libs.viewModelLiveData
+    implementation libs.lifeCycle
+    implementation libs.roomMain
+    implementation libs.roomRxjava
+    implementation libs.roomTest
+    annotationProcessor libs.roomProcesor
+
+
+    testImplementation libs.junit
+    testImplementation libs.mockito
+    testImplementation libs.rxjavaMain
+    testImplementation libs.rxandroid
+    testImplementation libs.core.testing
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+
+
+
+}
